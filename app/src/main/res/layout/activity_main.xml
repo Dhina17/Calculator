@@ -24,6 +24,7 @@
             android:id="@+id/button_nine"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:padding="0dp"
             android:text="@string/button_nine"
             app:cornerRadius="0dp" />
@@ -32,6 +33,7 @@
             android:id="@+id/button_eight"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_eight"
             app:cornerRadius="0dp" />
 
@@ -39,6 +41,7 @@
             android:id="@+id/button_seven"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_seven"
             app:cornerRadius="0dp" />
 
@@ -49,6 +52,7 @@
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
             android:gravity="center"
+            android:onClick="onDelButtonClick"
             android:text="@string/button_del"
             app:cornerRadius="0dp" />
 
@@ -56,6 +60,7 @@
             android:id="@+id/button_six"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_six"
             app:cornerRadius="0dp" />
 
@@ -63,6 +68,7 @@
             android:id="@+id/button_five"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_five"
             app:cornerRadius="0dp" />
 
@@ -70,6 +76,7 @@
             android:id="@+id/button_four"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_four"
             app:cornerRadius="0dp" />
 
@@ -80,6 +87,7 @@
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
             android:gravity="center"
+            android:onClick="onButtonClick"
             android:text="@string/button_division"
             app:cornerRadius="0dp" />
 
@@ -87,6 +95,7 @@
             android:id="@+id/button_three"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_three"
             app:cornerRadius="0dp" />
 
@@ -94,6 +103,7 @@
             android:id="@+id/button_two"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_two"
             app:cornerRadius="0dp" />
 
@@ -101,6 +111,7 @@
             android:id="@+id/button_one"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_one"
             app:cornerRadius="0dp" />
 
@@ -111,6 +122,7 @@
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
             android:gravity="center"
+            android:onClick="onButtonClick"
             android:text="@string/button_multiplication"
             app:cornerRadius="0dp" />
 
@@ -118,6 +130,7 @@
             android:id="@+id/button_point"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_point"
             app:cornerRadius="0dp" />
 
@@ -125,6 +138,7 @@
             android:id="@+id/button_zero"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_zero"
             app:cornerRadius="0dp" />
 
@@ -132,6 +146,7 @@
             android:id="@+id/button_addition"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
+            android:onClick="onButtonClick"
             android:text="@string/button_addition"
             app:cornerRadius="0dp" />
 
@@ -142,6 +157,7 @@
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
             android:gravity="center"
+            android:onClick="onButtonClick"
             android:text="@string/button_subtraction"
             app:cornerRadius="0dp" />
 
