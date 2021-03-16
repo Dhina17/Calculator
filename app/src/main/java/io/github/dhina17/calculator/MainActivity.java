@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mCalculationView = findViewById(R.id.calculation_view);
+        MaterialButton mDelButton = findViewById(R.id.button_delete);
 
         /* Auto Size the text  */
         TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(mCalculationView,
@@ -32,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 TypedValue.COMPLEX_UNIT_SP);
 
         mCalculationString = new StringBuffer();
+
+        /* Set long click listener for delete button to clear the calculation view */
+        mDelButton.setOnLongClickListener(view -> {
+            mCalculationString.setLength(0);
+            updateCalculationView(mCalculationString);
+            return true;
+        });
     }
 
     public void onButtonClick(View view) {
