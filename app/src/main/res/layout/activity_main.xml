@@ -12,6 +12,7 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true" />
 
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,8 +26,8 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
-            android:padding="0dp"
             android:text="@string/button_nine"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -35,6 +36,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_eight"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -43,6 +45,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_seven"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -54,6 +57,7 @@
             android:gravity="center"
             android:onClick="onDelButtonClick"
             android:text="@string/button_del"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -62,6 +66,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_six"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -70,6 +75,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_five"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -78,6 +84,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_four"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -89,6 +96,7 @@
             android:gravity="center"
             android:onClick="onButtonClick"
             android:text="@string/button_division"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -97,6 +105,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_three"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -105,6 +114,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_two"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -113,6 +123,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_one"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -124,6 +135,7 @@
             android:gravity="center"
             android:onClick="onButtonClick"
             android:text="@string/button_multiplication"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -132,6 +144,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_point"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -140,6 +153,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_zero"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -148,6 +162,7 @@
             android:layout_rowWeight="1"
             android:onClick="onButtonClick"
             android:text="@string/button_addition"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -159,6 +174,7 @@
             android:gravity="center"
             android:onClick="onButtonClick"
             android:text="@string/button_subtraction"
+            android:textSize="@dimen/button_text_size"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -174,7 +190,8 @@
             android:layout_columnSpan="3"
             android:layout_gravity="fill"
             android:gravity="center"
-            android:text="@string/button_equal" />
+            android:text="@string/button_equal"
+            android:textSize="@dimen/button_text_size" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_theme"
