@@ -15,7 +15,7 @@
     <string name="button_point">.</string>
     <string name="button_addition">+</string>
     <string name="button_subtraction">-</string>
-    <string name="button_multiplication">x</string>
+    <string name="button_multiplication">*</string>
     <string name="button_division">/</string>
     <string name="button_equal">=</string>
     <string name="button_del">DEL</string>
