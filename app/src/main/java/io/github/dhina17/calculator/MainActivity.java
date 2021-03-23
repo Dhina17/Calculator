@@ -11,10 +11,13 @@ import androidx.core.widget.TextViewCompat;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private HorizontalScrollView mScrollView;
     private MaterialTextView mCalculationView;
+    private MaterialTextView mResultView;
     private StringBuffer mCalculationString;
 
     private static final int AUTO_SIZE_MIN_TEXT_SIZE = 12;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mCalculationView = findViewById(R.id.calculation_view);
+        mResultView = findViewById(R.id.result_view);
         MaterialButton mDelButton = findViewById(R.id.button_delete);
         mScrollView = findViewById(R.id.scroll_view);
 
@@ -34,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         /* Auto Size the text  */
         TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(mCalculationView,
+                AUTO_SIZE_MIN_TEXT_SIZE, AUTO_SIZE_MAX_TEXT_SIZE, AUTO_SIZE_STEP_GRANULARITY,
+                TypedValue.COMPLEX_UNIT_SP);
+
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(mResultView,
                 AUTO_SIZE_MIN_TEXT_SIZE, AUTO_SIZE_MAX_TEXT_SIZE, AUTO_SIZE_STEP_GRANULARITY,
                 TypedValue.COMPLEX_UNIT_SP);
 
@@ -59,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
             mCalculationString.deleteCharAt(len - 1);
             updateCalculationView(mCalculationString);
         }
+    }
+
+    public void onEqualButtonClick(View view) {
+        double result = Calculator.calculate(mCalculationString.toString());
+        mResultView.setText(String.format(Locale.getDefault(), "%.2f", result));
     }
 
     private void updateCalculationView(StringBuffer sb) {

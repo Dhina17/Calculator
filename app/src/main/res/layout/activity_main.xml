@@ -15,7 +15,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/calculation_view"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:layout_gravity="end"
             android:singleLine="true"
             android:text="@string/button_zero"
@@ -23,10 +23,20 @@
 
     </HorizontalScrollView>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/result_view"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/scroll_view"
+        android:layout_gravity="end"
+        android:singleLine="true"
+        android:text="@string/button_zero"
+        android:textAlignment="textEnd" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/scroll_view"
+        android:layout_below="@+id/result_view"
         android:layout_alignParentBottom="true"
         android:columnCount="5"
         android:rowCount="5">
@@ -200,6 +210,7 @@
             android:layout_columnSpan="3"
             android:layout_gravity="fill"
             android:gravity="center"
+            android:onClick="onEqualButtonClick"
             android:text="@string/button_equal"
             android:textSize="@dimen/button_text_size" />
 
