@@ -51,7 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         MaterialButton button = (MaterialButton) view;
-        mCalculationString.append(button.getText());
+        String buttonText = button.getText().toString();
+        int len = mCalculationString.length();
+        if (len > 0) {
+            char prevText = mCalculationString.charAt(len - 1);
+            if (!Character.isDigit(prevText) && !Character.isDigit(buttonText.charAt(0))) {
+                mCalculationString.deleteCharAt(len - 1);
+            }
+        }
+        mCalculationString.append(buttonText);
         updateCalculationView(mCalculationString);
     }
 
@@ -65,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void onEqualButtonClick(View view) {
         String result;
-        try{
+        try {
             double cal = Calculator.calculate(mCalculationString.toString());
             result = String.format(Locale.getDefault(), "%.2f", cal);
-        }catch(IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             result = "Syntax Error";
-        }catch(ArithmeticException e){
+        } catch (ArithmeticException e) {
             result = "Can't divide by 0";
         }
 
