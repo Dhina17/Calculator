@@ -3,16 +3,18 @@ package io.github.dhina17.calculator;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.HorizontalScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.TextViewCompat;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mCalculationView;
+    private HorizontalScrollView mScrollView;
+    private MaterialTextView mCalculationView;
     private StringBuffer mCalculationString;
 
     private static final int AUTO_SIZE_MIN_TEXT_SIZE = 12;
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mCalculationView = findViewById(R.id.calculation_view);
         MaterialButton mDelButton = findViewById(R.id.button_delete);
+        mScrollView = findViewById(R.id.scroll_view);
+
+
 
         /* Auto Size the text  */
         TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(mCalculationView,
@@ -58,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateCalculationView(StringBuffer sb) {
         mCalculationView.setText(sb);
+        // Keep the scroll at the end
+        mScrollView.post(() -> mScrollView.fullScroll(View.FOCUS_RIGHT));
     }
 
 }
