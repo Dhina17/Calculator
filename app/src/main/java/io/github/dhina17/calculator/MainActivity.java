@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mDelButton.setOnLongClickListener(view -> {
             mCalculationString.setLength(0);
             updateCalculationView(mCalculationString);
+            mResultView.setText("");
             return true;
         });
     }
