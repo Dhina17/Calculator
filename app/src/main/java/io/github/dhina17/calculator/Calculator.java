@@ -4,7 +4,7 @@ import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class Calculator {
-    public static double calculate(String str) {
+    public static double calculate(String str) throws IllegalArgumentException,ArithmeticException {
         Expression expr = new ExpressionBuilder(str)
                 .build();
 

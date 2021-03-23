@@ -64,8 +64,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onEqualButtonClick(View view) {
-        double result = Calculator.calculate(mCalculationString.toString());
-        mResultView.setText(String.format(Locale.getDefault(), "%.2f", result));
+        String result;
+        try{
+            double cal = Calculator.calculate(mCalculationString.toString());
+            result = String.format(Locale.getDefault(), "%.2f", cal);
+        }catch(IllegalArgumentException e){
+            result = "Syntax Error";
+        }catch(ArithmeticException e){
+            result = "Can't divide by 0";
+        }
+
+        mResultView.setText(result);
     }
 
     private void updateCalculationView(StringBuffer sb) {
