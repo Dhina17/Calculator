@@ -34,16 +34,9 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton mDelButton = findViewById(R.id.button_delete);
         mScrollView = findViewById(R.id.scroll_view);
 
-
-
         /* Auto Size the text  */
-        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(mCalculationView,
-                AUTO_SIZE_MIN_TEXT_SIZE, AUTO_SIZE_MAX_TEXT_SIZE, AUTO_SIZE_STEP_GRANULARITY,
-                TypedValue.COMPLEX_UNIT_SP);
-
-        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(mResultView,
-                AUTO_SIZE_MIN_TEXT_SIZE, AUTO_SIZE_MAX_TEXT_SIZE, AUTO_SIZE_STEP_GRANULARITY,
-                TypedValue.COMPLEX_UNIT_SP);
+        autoSizeText(mCalculationView);
+        autoSizeText(mResultView);
 
         mCalculationString = new StringBuffer();
 
@@ -79,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
         mCalculationView.setText(sb);
         // Keep the scroll at the end
         mScrollView.post(() -> mScrollView.fullScroll(View.FOCUS_RIGHT));
+    }
+
+    private void autoSizeText(MaterialTextView textView) {
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(textView,
+                AUTO_SIZE_MIN_TEXT_SIZE, AUTO_SIZE_MAX_TEXT_SIZE, AUTO_SIZE_STEP_GRANULARITY,
+                TypedValue.COMPLEX_UNIT_SP);
     }
 
 }
