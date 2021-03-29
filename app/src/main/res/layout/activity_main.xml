@@ -206,10 +206,10 @@
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_scientific_part"
+            android:id="@+id/button_theme"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
-            android:text="@string/button_sci"
+            android:text="@string/button_theme"
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -223,10 +223,10 @@
             android:textSize="@dimen/button_text_size" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_theme"
+            android:id="@+id/button_scientific_part"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_rowWeight="1"
-            android:text="@string/button_theme"
+            android:text="@string/button_sci"
             app:cornerRadius="0dp" />
 
     </GridLayout>
