@@ -3,6 +3,7 @@ package io.github.dhina17.calculator;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.HorizontalScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mCalculationView = findViewById(R.id.calculation_view);
         mResultView = findViewById(R.id.result_view);
+        ViewStub mViewStub = findViewById(R.id.view_stub);
+
+        /* Inflate the basic function buttons */
+        mViewStub.setLayoutResource(R.layout.grid_basic_functions);
+        mViewStub.inflate();
+
         MaterialButton mDelButton = findViewById(R.id.button_delete);
         mScrollView = findViewById(R.id.scroll_view);
 
