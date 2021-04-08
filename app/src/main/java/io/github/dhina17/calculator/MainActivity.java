@@ -61,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (len > 0 && buttonText.length() < 3) {
             char prevText = mCalculationString.charAt(len - 1);
-            if (!Character.isDigit(prevText) && !Character.isDigit(buttonText.charAt(0))) {
+            if (!Character.isDigit(prevText) && !Character.isDigit(buttonText.charAt(0))
+                    && !(buttonText.equals("π") || buttonText.equals("√") || buttonText.equals("(")
+                    || buttonText.equals(")"))) {
                 mCalculationString.deleteCharAt(len - 1);
             }
         } else if (buttonText.length() >= 3 || buttonText.contains("√")) {
