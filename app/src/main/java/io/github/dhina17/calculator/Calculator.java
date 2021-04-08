@@ -1,13 +1,26 @@
 package io.github.dhina17.calculator;
 
-import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
+
+import com.udojava.evalex.Expression;
+
+import java.math.BigDecimal;
 
 public class Calculator {
-    public static double calculate(String str) throws IllegalArgumentException,ArithmeticException {
-        Expression expr = new ExpressionBuilder(str)
-                .build();
-
-        return expr.evaluate();
+    public static BigDecimal calculate(String str) {
+        return new Expression(getExpr(str))
+                .with("π", Expression.PI)
+                .eval();
     }
+
+    public static String getExpr(final String str) {
+        if (str.contains("√")) {
+            return str.replace("√", "sqrt");
+        } else if (str.contains("cosec")) {
+            return str.replace("cosec", "csc");
+        } else {
+            return str;
+        }
+    }
+
+
 }

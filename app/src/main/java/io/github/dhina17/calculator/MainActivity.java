@@ -3,7 +3,6 @@ package io.github.dhina17.calculator;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewStub;
 import android.widget.HorizontalScrollView;
 import android.widget.ViewSwitcher;
 
@@ -12,8 +11,9 @@ import androidx.core.widget.TextViewCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
+import com.udojava.evalex.Expression;
 
-import java.util.Locale;
+import java.math.BigDecimal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,11 +58,14 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton button = (MaterialButton) view;
         String buttonText = button.getText().toString();
         int len = mCalculationString.length();
-        if (len > 0) {
+
+        if (len > 0 && buttonText.length() < 3) {
             char prevText = mCalculationString.charAt(len - 1);
             if (!Character.isDigit(prevText) && !Character.isDigit(buttonText.charAt(0))) {
                 mCalculationString.deleteCharAt(len - 1);
             }
+        } else if (buttonText.length() >= 3 || buttonText.contains("√")) {
+            buttonText += "(";
         }
         mCalculationString.append(buttonText);
         updateCalculationView(mCalculationString);
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onDelButtonClick(View view) {
         int len = mCalculationString.length();
+
         if (len > 0) {
             mCalculationString.deleteCharAt(len - 1);
             updateCalculationView(mCalculationString);
@@ -79,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
     public void onEqualButtonClick(View view) {
         String result;
         try {
-            double cal = Calculator.calculate(mCalculationString.toString());
-            result = String.format(Locale.getDefault(), "%.2f", cal);
-        } catch (IllegalArgumentException e) {
+            BigDecimal cal = Calculator.calculate(mCalculationString.toString());
+            result = cal.toString();
+        } catch (Expression.ExpressionException e) {
             result = "Syntax Error";
         } catch (ArithmeticException e) {
             result = "Can't divide by 0";
