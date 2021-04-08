@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/grid_basic_functions"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grid_scientific_functions"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
@@ -9,30 +9,33 @@
     android:rowCount="5">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_nine"
+        android:id="@+id/button_sine"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_nine"
-        android:textSize="@dimen/button_text_size"
+        android:text="@string/button_sine"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_sci_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_eight"
+        android:id="@+id/button_cosine"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_eight"
-        android:textSize="@dimen/button_text_size"
+        android:text="@string/button_cosine"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_sci_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_seven"
+        android:id="@+id/button_tangent"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_seven"
-        android:textSize="@dimen/button_text_size"
+        android:text="@string/button_tangent"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_sci_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -48,30 +51,33 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_six"
+        android:id="@+id/button_cosecant"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_six"
-        android:textSize="@dimen/button_text_size"
+        android:text="@string/button_cosecant"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_sci_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_five"
+        android:id="@+id/button_secant"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_five"
-        android:textSize="@dimen/button_text_size"
+        android:text="@string/button_secant"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_sci_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_four"
+        android:id="@+id/button_cotangent"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_four"
-        android:textSize="@dimen/button_text_size"
+        android:text="@string/button_cotangent"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_sci_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -87,29 +93,31 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_three"
+        android:id="@+id/button_powers"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_three"
+        android:text="@string/button_power"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_two"
+        android:id="@+id/button_square_root"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_two"
+        android:text="@string/button_square_root"
+        android:textAllCaps="false"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_one"
+        android:id="@+id/button_pie"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_one"
+        android:text="@string/button_pie"
+        android:textAllCaps="false"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
@@ -126,20 +134,20 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_point"
+        android:id="@+id/button_left_parenthesis"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_point"
+        android:text="@string/button_left_parenthesis"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_zero"
+        android:id="@+id/button_right_parenthesis"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onButtonClick"
-        android:text="@string/button_zero"
+        android:text="@string/button_right_parenthesis"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
@@ -186,7 +194,6 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_rowWeight="1"
         android:onClick="onSciButtonClick"
-
         android:text="@string/button_sci"
         app:cornerRadius="0dp" />
 

@@ -2,6 +2,7 @@
     <string name="app_name">Calculator</string>
 
     <!-- Buttons -->
+    <!-- Basic functions -->
     <string name="button_zero">0</string>
     <string name="button_one">1</string>
     <string name="button_two">2</string>
@@ -21,4 +22,18 @@
     <string name="button_del">DEL</string>
     <string name="button_theme">THEME</string>
     <string name="button_sci">SCI</string>
+
+    <!-- Scientific functions -->
+    <string name="button_sine">sin</string>
+    <string name="button_cosine">cos</string>
+    <string name="button_tangent">tan</string>
+    <string name="button_cosecant">cosec</string>
+    <string name="button_secant">sec</string>
+    <string name="button_cotangent">cot</string>
+    <string name="button_power">^</string>
+    <string name="button_square_root">√</string>
+    <string name="button_pie">π</string>
+    <string name="button_right_parenthesis">)</string>
+    <string name="button_left_parenthesis">(</string>
+
 </resources>

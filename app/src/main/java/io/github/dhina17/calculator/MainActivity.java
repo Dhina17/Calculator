@@ -5,6 +5,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.HorizontalScrollView;
+import android.widget.ViewSwitcher;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.TextViewCompat;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private MaterialTextView mCalculationView;
     private MaterialTextView mResultView;
     private StringBuffer mCalculationString;
+    private ViewSwitcher mViewSwitch;
 
     private static final int AUTO_SIZE_MIN_TEXT_SIZE = 12;
     private static final int AUTO_SIZE_MAX_TEXT_SIZE = 50;
@@ -32,11 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mCalculationView = findViewById(R.id.calculation_view);
         mResultView = findViewById(R.id.result_view);
-        ViewStub mViewStub = findViewById(R.id.view_stub);
-
-        /* Inflate the basic function buttons */
-        mViewStub.setLayoutResource(R.layout.grid_basic_functions);
-        mViewStub.inflate();
+        mViewSwitch = findViewById(R.id.view_switch);
 
         MaterialButton mDelButton = findViewById(R.id.button_delete);
         mScrollView = findViewById(R.id.scroll_view);
@@ -90,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mResultView.setText(result);
+    }
+
+    public void onSciButtonClick(View view) {
+        mViewSwitch.showNext();
     }
 
     private void updateCalculationView(StringBuffer sb) {
