@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         /* Restore the prev state of calculation view when theme changed */
         if (savedInstanceState != null) {
             String prevStateExpr = savedInstanceState.getString("calculation_str");
-            if(!prevStateExpr.isEmpty()){
+            if (!prevStateExpr.isEmpty()) {
                 mCalculationString.append(prevStateExpr);
                 updateCalculationView(mCalculationString);
             }
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         int len = mCalculationString.length();
 
         /* Remove the zero in front of the expr after restore zero with del button */
-        if(len > 0 && mCalculationString.charAt(0) == '0') {
+        if (len > 0 && mCalculationString.charAt(0) == '0') {
             mCalculationString.deleteCharAt(0);
             len = mCalculationString.length();
         }
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             BigDecimal cal = Calculator.calculate(mCalculationString.toString());
             result = cal.toString();
-        } catch (Expression.ExpressionException e) {
+        } catch (Expression.ExpressionException | NumberFormatException e) {
             result = "Syntax Error";
         } catch (ArithmeticException e) {
             result = "Can't divide by 0";
