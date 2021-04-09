@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/grid_scientific_functions"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentBottom="true"
-    android:columnCount="5"
-    android:rowCount="5">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_sine"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="0"
         android:layout_rowWeight="1"
+        android:layout_column="0"
         android:onClick="onButtonClick"
         android:text="@string/button_sine"
         android:textAllCaps="false"
@@ -21,7 +17,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_cosine"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="0"
         android:layout_rowWeight="1"
+        android:layout_column="1"
         android:onClick="onButtonClick"
         android:text="@string/button_cosine"
         android:textAllCaps="false"
@@ -31,7 +29,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_tangent"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="0"
         android:layout_rowWeight="1"
+        android:layout_column="2"
         android:onClick="onButtonClick"
         android:text="@string/button_tangent"
         android:textAllCaps="false"
@@ -39,21 +39,11 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_delete"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:gravity="center"
-        android:onClick="onDelButtonClick"
-        android:text="@string/button_del"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="0dp" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_cosecant"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="1"
         android:layout_rowWeight="1"
+        android:layout_column="0"
         android:onClick="onButtonClick"
         android:text="@string/button_cosecant"
         android:textAllCaps="false"
@@ -63,7 +53,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_secant"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="1"
         android:layout_rowWeight="1"
+        android:layout_column="1"
         android:onClick="onButtonClick"
         android:text="@string/button_secant"
         android:textAllCaps="false"
@@ -73,7 +65,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_cotangent"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="1"
         android:layout_rowWeight="1"
+        android:layout_column="2"
         android:onClick="onButtonClick"
         android:text="@string/button_cotangent"
         android:textAllCaps="false"
@@ -81,21 +75,11 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_division"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:gravity="center"
-        android:onClick="onButtonClick"
-        android:text="@string/button_division"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="0dp" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_powers"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="2"
         android:layout_rowWeight="1"
+        android:layout_column="0"
         android:onClick="onButtonClick"
         android:text="@string/button_power"
         android:textSize="@dimen/button_text_size"
@@ -104,7 +88,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_square_root"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="2"
         android:layout_rowWeight="1"
+        android:layout_column="1"
         android:onClick="onButtonClick"
         android:text="@string/button_square_root"
         android:textAllCaps="false"
@@ -114,7 +100,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_pie"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="2"
         android:layout_rowWeight="1"
+        android:layout_column="2"
         android:onClick="onButtonClick"
         android:text="@string/button_pie"
         android:textAllCaps="false"
@@ -122,21 +110,11 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_multiplication"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:gravity="center"
-        android:onClick="onButtonClick"
-        android:text="@string/button_multiplication"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="0dp" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_left_parenthesis"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="3"
         android:layout_rowWeight="1"
+        android:layout_column="0"
         android:onClick="onButtonClick"
         android:text="@string/button_left_parenthesis"
         android:textSize="@dimen/button_text_size"
@@ -145,56 +123,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_right_parenthesis"
         style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="3"
         android:layout_rowWeight="1"
+        android:layout_column="1"
         android:onClick="onButtonClick"
         android:text="@string/button_right_parenthesis"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_addition"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:onClick="onButtonClick"
-        android:text="@string/button_addition"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="0dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_subtraction"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:gravity="center"
-        android:onClick="onButtonClick"
-        android:text="@string/button_subtraction"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="0dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_theme"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:text="@string/button_theme"
-        app:cornerRadius="0dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_equal"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="3"
-        android:layout_gravity="fill"
-        android:gravity="center"
-        android:onClick="onEqualButtonClick"
-        android:text="@string/button_equal"
-        android:textSize="@dimen/button_text_size" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_scientific_part"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_rowWeight="1"
-        android:onClick="onSciButtonClick"
-        android:text="@string/button_sci"
-        app:cornerRadius="0dp" />
-
-</GridLayout>
+</merge>

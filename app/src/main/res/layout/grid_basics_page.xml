@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_basic_functions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:columnCount="5"
+    android:rowCount="5">
+
+    <include layout="@layout/buttons_numbers"/>
+    <include layout="@layout/button_delete" />
+    <include layout="@layout/buttons_basic_operations" />
+    <include layout="@layout/button_theme" />
+    <include layout="@layout/button_equal" />
+    <include layout="@layout/button_sci"/>
+
+</GridLayout>

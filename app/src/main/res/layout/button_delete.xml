@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_delete"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:layout_column="3"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:onClick="onDelButtonClick"
+        android:text="@string/button_del"
+        android:textSize="@dimen/button_text_size"
+        app:cornerRadius="0dp" />
+</merge>

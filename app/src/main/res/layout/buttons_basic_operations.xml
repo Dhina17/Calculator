@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_division"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:layout_column="3"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:text="@string/button_division"
+        android:textSize="@dimen/button_text_size"
+        app:cornerRadius="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_multiplication"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:layout_column="3"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:text="@string/button_multiplication"
+        android:textSize="@dimen/button_text_size"
+        app:cornerRadius="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_addition"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="3"
+        android:layout_rowWeight="1"
+        android:layout_column="2"
+        android:onClick="onButtonClick"
+        android:text="@string/button_addition"
+        android:textSize="@dimen/button_text_size"
+        app:cornerRadius="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_subtraction"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="3"
+        android:layout_rowWeight="1"
+        android:layout_column="3"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:text="@string/button_subtraction"
+        android:textSize="@dimen/button_text_size"
+        app:cornerRadius="0dp" />
+
+
+</merge>
