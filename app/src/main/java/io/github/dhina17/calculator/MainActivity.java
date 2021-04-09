@@ -77,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
         String buttonText = button.getText().toString();
         int len = mCalculationString.length();
 
+        /* Remove the zero in front of the expr after restore zero with del button */
+        if(len > 0 && mCalculationString.charAt(0) == '0') {
+            mCalculationString.deleteCharAt(0);
+            len = mCalculationString.length();
+        }
 
         if (len > 0 && buttonText.length() < 3) {
             char prevText = mCalculationString.charAt(len - 1);
