@@ -2,7 +2,6 @@ package io.github.dhina17.calculator;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.Toast;
@@ -11,7 +10,6 @@ import android.widget.ViewSwitcher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.widget.TextViewCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
@@ -29,10 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private int mNightMode;
     private SharedPreferences sharedPreferences;
 
-    private static final int AUTO_SIZE_MIN_TEXT_SIZE = 12;
-    private static final int AUTO_SIZE_MAX_TEXT_SIZE = 50;
-    private static final int AUTO_SIZE_STEP_GRANULARITY = 2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialButton mDelButton = findViewById(R.id.button_delete);
         mScrollView = findViewById(R.id.scroll_view);
-
-        /* Auto Size the text  */
-        autoSizeText(mCalculationView);
-        autoSizeText(mResultView);
 
         mCalculationString = new StringBuffer();
 
@@ -69,8 +59,9 @@ public class MainActivity extends AppCompatActivity {
         /* Set long click listener for delete button to clear the calculation view */
         mDelButton.setOnLongClickListener(view -> {
             mCalculationString.setLength(0);
+            mCalculationString.append("0");
             updateCalculationView(mCalculationString);
-            mResultView.setText("");
+            mResultView.setText("0");
             return true;
         });
     }
@@ -85,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton button = (MaterialButton) view;
         String buttonText = button.getText().toString();
         int len = mCalculationString.length();
+
 
         if (len > 0 && buttonText.length() < 3) {
             char prevText = mCalculationString.charAt(len - 1);
@@ -105,8 +97,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (len > 0) {
             mCalculationString.deleteCharAt(len - 1);
-            updateCalculationView(mCalculationString);
         }
+        if (mCalculationString.length() == 0) {
+            mCalculationString.append("0");
+        }
+        updateCalculationView(mCalculationString);
     }
 
     public void onEqualButtonClick(View view) {
@@ -155,12 +150,6 @@ public class MainActivity extends AppCompatActivity {
         mCalculationView.setText(sb);
         // Keep the scroll at the end
         mScrollView.post(() -> mScrollView.fullScroll(View.FOCUS_RIGHT));
-    }
-
-    private void autoSizeText(MaterialTextView textView) {
-        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(textView,
-                AUTO_SIZE_MIN_TEXT_SIZE, AUTO_SIZE_MAX_TEXT_SIZE, AUTO_SIZE_STEP_GRANULARITY,
-                TypedValue.COMPLEX_UNIT_SP);
     }
 
 }

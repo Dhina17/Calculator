@@ -19,7 +19,8 @@
             android:layout_gravity="end"
             android:singleLine="true"
             android:text="@string/button_zero"
-            android:textAlignment="textEnd" />
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/view_calculation_text_size" />
 
     </HorizontalScrollView>
 
@@ -38,7 +39,8 @@
             android:layout_gravity="start"
             android:singleLine="true"
             android:text="@string/button_zero"
-            android:textAlignment="textStart" />
+            android:textAlignment="textStart"
+            android:textSize="@dimen/view_calculation_text_size" />
 
     </HorizontalScrollView>
 
