@@ -12,6 +12,7 @@
         android:text="@string/button_sine"
         android:textAllCaps="false"
         android:textSize="@dimen/button_sci_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -24,6 +25,7 @@
         android:text="@string/button_cosine"
         android:textAllCaps="false"
         android:textSize="@dimen/button_sci_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -36,6 +38,7 @@
         android:text="@string/button_tangent"
         android:textAllCaps="false"
         android:textSize="@dimen/button_sci_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -48,6 +51,7 @@
         android:text="@string/button_cosecant"
         android:textAllCaps="false"
         android:textSize="@dimen/button_sci_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -60,6 +64,7 @@
         android:text="@string/button_secant"
         android:textAllCaps="false"
         android:textSize="@dimen/button_sci_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -72,6 +77,7 @@
         android:text="@string/button_cotangent"
         android:textAllCaps="false"
         android:textSize="@dimen/button_sci_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -83,6 +89,7 @@
         android:onClick="onButtonClick"
         android:text="@string/button_power"
         android:textSize="@dimen/button_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -95,6 +102,7 @@
         android:text="@string/button_square_root"
         android:textAllCaps="false"
         android:textSize="@dimen/button_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -107,6 +115,7 @@
         android:text="@string/button_pie"
         android:textAllCaps="false"
         android:textSize="@dimen/button_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -118,6 +127,7 @@
         android:onClick="onButtonClick"
         android:text="@string/button_left_parenthesis"
         android:textSize="@dimen/button_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -129,6 +139,7 @@
         android:onClick="onButtonClick"
         android:text="@string/button_right_parenthesis"
         android:textSize="@dimen/button_text_size"
+        android:textColor="@color/sci_operators_color"
         app:cornerRadius="0dp" />
 
 </merge>

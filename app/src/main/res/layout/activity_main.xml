@@ -5,18 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <HorizontalScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_height="100dp"
         android:scrollbars="none">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/calculation_view"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="match_parent"
             android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
             android:singleLine="true"
             android:text="@string/button_zero"
             android:textAlignment="textEnd"
@@ -24,11 +25,23 @@
 
     </HorizontalScrollView>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/result_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/result_header_text"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+
     <HorizontalScrollView
         android:id="@+id/result_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/scroll_view"
+        android:layout_below="@+id/result_header"
         android:layout_marginStart="8dp"
         android:scrollbars="none">
 
@@ -41,13 +54,13 @@
             android:text="@string/button_zero"
             android:textAlignment="textStart"
             android:textSize="@dimen/view_calculation_text_size" />
-
     </HorizontalScrollView>
+
 
     <ViewSwitcher
         android:id="@+id/view_switch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/result_scroll_view"
         android:layout_alignParentBottom="true">
 
@@ -56,5 +69,4 @@
         <include layout="@layout/grid_scientific_page" />
 
     </ViewSwitcher>
-
 </RelativeLayout>

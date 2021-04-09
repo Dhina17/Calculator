@@ -36,4 +36,7 @@
     <string name="button_right_parenthesis">)</string>
     <string name="button_left_parenthesis">(</string>
 
+    <!-- Result header -->
+    <string name="result_header_text">Result:</string>
+
 </resources>
