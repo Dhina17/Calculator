@@ -42,8 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         /* Restore the prev state of calculation view when theme changed */
         if (savedInstanceState != null) {
-            mCalculationString.append(savedInstanceState.getString("calculation_str"));
-            updateCalculationView(mCalculationString);
+            String prevStateExpr = savedInstanceState.getString("calculation_str");
+            if(!prevStateExpr.isEmpty()){
+                mCalculationString.append(prevStateExpr);
+                updateCalculationView(mCalculationString);
+            }
         }
 
         sharedPreferences = getSharedPreferences(
