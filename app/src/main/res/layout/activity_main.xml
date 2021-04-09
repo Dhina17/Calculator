@@ -18,9 +18,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="end"
             android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
             android:singleLine="true"
             android:text="@string/button_zero"
-            android:textAlignment="textEnd"
             android:textSize="@dimen/view_calculation_text_size" />
 
     </HorizontalScrollView>
@@ -50,9 +50,9 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_gravity="start"
+            android:gravity="center_vertical"
             android:singleLine="true"
             android:text="@string/button_zero"
-            android:textAlignment="textStart"
             android:textSize="@dimen/view_calculation_text_size" />
     </HorizontalScrollView>
 
