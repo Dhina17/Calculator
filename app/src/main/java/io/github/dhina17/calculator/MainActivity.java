@@ -8,6 +8,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.widget.TextViewCompat;
@@ -49,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         mCalculationString = new StringBuffer();
 
+        /* Restore the prev state of calculation view when theme changed */
+        if (savedInstanceState != null) {
+            mCalculationString.append(savedInstanceState.getString("calculation_str"));
+            updateCalculationView(mCalculationString);
+        }
+
         sharedPreferences = getSharedPreferences(
                 "io.github.dhina17.Calculator.shared_prefs", MODE_PRIVATE);
 
@@ -66,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
             mResultView.setText("");
             return true;
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("calculation_str", mCalculationString.toString());
     }
 
     public void onButtonClick(View view) {
@@ -117,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     public void onThemeButtonClick(View view) {
         mNightMode = AppCompatDelegate.getDefaultNightMode();
         String mode = null;
-        switch(mNightMode){
+        switch (mNightMode) {
             case AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_YES;
                 mode = "Dark Theme";
