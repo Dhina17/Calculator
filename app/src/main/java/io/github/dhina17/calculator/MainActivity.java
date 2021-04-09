@@ -1,12 +1,15 @@
 package io.github.dhina17.calculator;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.HorizontalScrollView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.widget.TextViewCompat;
 
 import com.google.android.material.button.MaterialButton;
@@ -22,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
     private MaterialTextView mResultView;
     private StringBuffer mCalculationString;
     private ViewSwitcher mViewSwitch;
+    private int mNightMode;
+    private SharedPreferences sharedPreferences;
 
     private static final int AUTO_SIZE_MIN_TEXT_SIZE = 12;
     private static final int AUTO_SIZE_MAX_TEXT_SIZE = 50;
     private static final int AUTO_SIZE_STEP_GRANULARITY = 2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
         autoSizeText(mResultView);
 
         mCalculationString = new StringBuffer();
+
+        sharedPreferences = getSharedPreferences(
+                "io.github.dhina17.Calculator.shared_prefs", MODE_PRIVATE);
+
+        /* Default night mode */
+        mNightMode = sharedPreferences.getInt("night_mode",
+                AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
+        /* Apply the theme */
+        AppCompatDelegate.setDefaultNightMode(mNightMode);
 
         /* Set long click listener for delete button to clear the calculation view */
         mDelButton.setOnLongClickListener(view -> {
@@ -98,6 +112,30 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSciButtonClick(View view) {
         mViewSwitch.showNext();
+    }
+
+    public void onThemeButtonClick(View view) {
+        mNightMode = AppCompatDelegate.getDefaultNightMode();
+        String mode = null;
+        switch(mNightMode){
+            case AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM:
+                mNightMode = AppCompatDelegate.MODE_NIGHT_YES;
+                mode = "Dark Theme";
+                break;
+            case AppCompatDelegate.MODE_NIGHT_YES:
+                mNightMode = AppCompatDelegate.MODE_NIGHT_NO;
+                mode = "Light Theme";
+                break;
+            case AppCompatDelegate.MODE_NIGHT_NO:
+                mNightMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+                mode = "System Theme";
+                break;
+        }
+        sharedPreferences.edit()
+                .putInt("night_mode", mNightMode)
+                .apply();
+        AppCompatDelegate.setDefaultNightMode(mNightMode);
+        Toast.makeText(this, "Switched to " + mode, Toast.LENGTH_SHORT).show();
     }
 
     private void updateCalculationView(StringBuffer sb) {
