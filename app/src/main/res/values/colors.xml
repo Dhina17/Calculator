@@ -16,7 +16,7 @@
     <color name="sci_operators_color">@color/brown_500</color>
 
     <!-- Number pad color -->
-    <color name="number_button_text_color_light">#2e2e2e</color>
+    <color name="number_button_text_color_light">#404040</color>
     <color name="number_button_text_color_dark">#d9d9d9</color>
 
     <!-- Calculation and result view -->
