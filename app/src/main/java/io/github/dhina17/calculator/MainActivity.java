@@ -2,7 +2,6 @@ package io.github.dhina17.calculator;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.Toast;
@@ -28,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private int mNightMode;
     private SharedPreferences sharedPreferences;
     private String mResultValue;
+    private boolean mIsSci = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         mCalculationString = new StringBuffer();
 
-        /* Restore the prev state of calculation/result view when theme changed */
+        /* Restore the prev state of calculation/result/grid view when theme changed */
         if (savedInstanceState != null) {
             String prevStateExpr = savedInstanceState.getString("calculation_str");
             if (!prevStateExpr.isEmpty()) {
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
             if (mResultValue != null) {
                 mResultView.setText(mResultValue);
             }
+            mIsSci = savedInstanceState.getBoolean("is_sci_page");
+            if(mIsSci) mViewSwitch.showNext();
 
         }
 
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putString("calculation_str", mCalculationString.toString());
         outState.putString("result_value", mResultValue);
+        outState.putBoolean("is_sci_page", mIsSci);
     }
 
     public void onButtonClick(View view) {
@@ -136,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSciButtonClick(View view) {
         mViewSwitch.showNext();
+        mIsSci = !mIsSci;
     }
 
     public void onThemeButtonClick(View view) {
