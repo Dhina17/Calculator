@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="brown_300">#A1887F</color>
+    <color name="brown_500">#795548</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
@@ -13,7 +13,7 @@
 
     <!-- Operators -->
     <color name="basic_operators_color">@color/teal_700</color>
-    <color name="sci_operators_color">@color/purple_500</color>
+    <color name="sci_operators_color">@color/brown_500</color>
 
     <!-- Number pad color -->
     <color name="number_button_text_color_light">#2e2e2e</color>
