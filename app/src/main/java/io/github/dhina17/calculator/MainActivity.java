@@ -2,6 +2,7 @@ package io.github.dhina17.calculator;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewSwitcher mViewSwitch;
     private int mNightMode;
     private SharedPreferences sharedPreferences;
+    private String mResultValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +42,18 @@ public class MainActivity extends AppCompatActivity {
 
         mCalculationString = new StringBuffer();
 
-        /* Restore the prev state of calculation view when theme changed */
+        /* Restore the prev state of calculation/result view when theme changed */
         if (savedInstanceState != null) {
             String prevStateExpr = savedInstanceState.getString("calculation_str");
             if (!prevStateExpr.isEmpty()) {
                 mCalculationString.append(prevStateExpr);
                 updateCalculationView(mCalculationString);
             }
+            mResultValue = savedInstanceState.getString("result_value");
+            if (mResultValue != null) {
+                mResultView.setText(mResultValue);
+            }
+
         }
 
         sharedPreferences = getSharedPreferences(
@@ -64,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
             mCalculationString.setLength(0);
             mCalculationString.append("0");
             updateCalculationView(mCalculationString);
-            mResultView.setText("0");
+            mResultValue = "0";
+            mResultView.setText(mResultValue);
             return true;
         });
     }
@@ -73,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("calculation_str", mCalculationString.toString());
+        outState.putString("result_value", mResultValue);
     }
 
     public void onButtonClick(View view) {
@@ -113,17 +122,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onEqualButtonClick(View view) {
-        String result;
         try {
             BigDecimal cal = Calculator.calculate(mCalculationString.toString());
-            result = cal.toString();
+            mResultValue = cal.toString();
         } catch (Expression.ExpressionException | NumberFormatException e) {
-            result = "Syntax Error";
+            mResultValue = "Syntax Error";
         } catch (ArithmeticException e) {
-            result = "Can't divide by 0";
+            mResultValue = "Can't divide by 0";
         }
 
-        mResultView.setText(result);
+        mResultView.setText(mResultValue);
     }
 
     public void onSciButtonClick(View view) {
