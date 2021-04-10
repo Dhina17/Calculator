@@ -22,6 +22,7 @@
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="@string/button_zero"
+            android:textColor="@color/calculation_view_text_color"
             android:textSize="@dimen/view_calculation_text_size" />
 
     </HorizontalScrollView>
@@ -31,11 +32,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/scroll_view"
-        android:layout_marginTop="@dimen/view_vertical_margin"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/view_vertical_margin"
         android:layout_marginEnd="8dp"
         android:text="@string/result_header_text"
         android:textAlignment="textStart"
+        android:textColor="@color/result_header_text_color"
         android:textSize="20sp" />
 
 
@@ -44,8 +46,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/result_header"
-        android:layout_marginTop="@dimen/view_vertical_margin"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/view_vertical_margin"
         android:scrollbars="none">
 
         <com.google.android.material.textview.MaterialTextView
@@ -56,6 +58,7 @@
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="@string/button_zero"
+            android:textColor="@color/result_view_text_color"
             android:textSize="@dimen/view_calculation_text_size" />
     </HorizontalScrollView>
 
@@ -65,8 +68,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/result_scroll_view"
-        android:layout_marginTop="@dimen/view_vertical_margin"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/view_vertical_margin">
 
         <include layout="@layout/grid_basics_page" />
 

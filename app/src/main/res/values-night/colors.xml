@@ -5,4 +5,9 @@
 
     <!-- Delete button -->
     <color name="del_button_tint_color_light">#CF6679</color>
+
+    <!-- Calculation and result view -->
+    <color name="result_header_text_color">@color/number_button_text_color_dark</color>
+    <color name="result_view_text_color">@color/number_button_text_color_dark</color>
+    <color name="calculation_view_text_color">@color/number_button_text_color_dark</color>
 </resources>
