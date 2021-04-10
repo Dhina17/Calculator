@@ -16,4 +16,7 @@
     <color name="basic_operators_color">@color/teal_700</color>
     <color name="sci_operators_color">@color/purple_500</color>
 
+    <!-- Number pad color -->
+    <color name="number_button_text_color_light">#2e2e2e</color>
+    <color name="number_button_text_color_dark">#d9d9d9</color>
 </resources>

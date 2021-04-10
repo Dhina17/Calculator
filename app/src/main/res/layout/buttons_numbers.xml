@@ -4,7 +4,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_nine"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="0"
         android:layout_rowWeight="1"
         android:layout_column="0"
@@ -15,7 +15,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_eight"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="0"
         android:layout_rowWeight="1"
         android:layout_column="1"
@@ -26,7 +26,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_seven"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="0"
         android:layout_rowWeight="1"
         android:layout_column="2"
@@ -37,7 +37,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_six"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="1"
         android:layout_rowWeight="1"
         android:layout_column="0"
@@ -48,7 +48,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_five"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="1"
         android:layout_rowWeight="1"
         android:layout_column="1"
@@ -59,7 +59,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_four"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="1"
         android:layout_rowWeight="1"
         android:layout_column="2"
@@ -70,7 +70,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_three"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="2"
         android:layout_rowWeight="1"
         android:layout_column="0"
@@ -81,7 +81,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_two"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="2"
         android:layout_rowWeight="1"
         android:layout_column="1"
@@ -92,7 +92,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_one"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="2"
         android:layout_rowWeight="1"
         android:layout_column="2"
@@ -103,7 +103,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_zero"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="3"
         android:layout_rowWeight="1"
         android:layout_column="1"
@@ -114,7 +114,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_point"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Theme.NumberPad"
         android:layout_row="3"
         android:layout_rowWeight="1"
         android:layout_column="0"

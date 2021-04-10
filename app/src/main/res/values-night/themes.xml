@@ -17,4 +17,9 @@
         <!-- Animation -->
         <item name="android:windowAnimationStyle">@style/windowAnimationTransition</item>
     </style>
+
+    <!-- NumberPad theme -->
+    <style name="Theme.NumberPad" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/number_button_text_color_dark</item>
+    </style>
 </resources>
