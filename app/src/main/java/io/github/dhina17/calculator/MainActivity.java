@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
@@ -91,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         super.onPrepareOptionsMenu(menu);
         /* Default toggle icon */
-        menu.getItem(0).setIcon(ContextCompat.getDrawable(this,
-                sharedPreferences.getInt("icon_id", R.drawable.ic_system_default_mode))
+        menu.getItem(0).setIcon(
+                sharedPreferences.getInt("icon_id", R.drawable.ic_system_default_mode)
         );
         return true;
     }
