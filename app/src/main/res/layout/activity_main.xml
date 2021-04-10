@@ -9,7 +9,8 @@
     <HorizontalScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_vertical_margin"
         android:scrollbars="none">
 
         <com.google.android.material.textview.MaterialTextView
@@ -30,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/scroll_view"
+        android:layout_marginTop="@dimen/view_vertical_margin"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/result_header_text"
@@ -42,13 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/result_header"
+        android:layout_marginTop="@dimen/view_vertical_margin"
         android:layout_marginStart="8dp"
         android:scrollbars="none">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/result_view"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:gravity="center_vertical"
             android:singleLine="true"
@@ -62,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/result_scroll_view"
+        android:layout_marginTop="@dimen/view_vertical_margin"
         android:layout_alignParentBottom="true">
 
         <include layout="@layout/grid_basics_page" />

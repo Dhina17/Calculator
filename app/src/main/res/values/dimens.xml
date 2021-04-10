@@ -3,4 +3,5 @@
     <dimen name="button_text_size">30sp</dimen>
     <dimen name="button_sci_text_size">23sp</dimen>
     <dimen name="view_calculation_text_size">40sp</dimen>
+    <dimen name="view_vertical_margin">20dp</dimen>
 </resources>
