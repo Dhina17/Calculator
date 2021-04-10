@@ -2,6 +2,8 @@ package io.github.dhina17.calculator;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.Toast;
@@ -10,6 +12,8 @@ import android.widget.ViewSwitcher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
@@ -33,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /* Action Bar */
+        Toolbar appBar = findViewById(R.id.action_bar);
+        setSupportActionBar(appBar);
+
         mCalculationView = findViewById(R.id.calculation_view);
         mResultView = findViewById(R.id.result_view);
         mViewSwitch = findViewById(R.id.view_switch);
@@ -54,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 mResultView.setText(mResultValue);
             }
             mIsSci = savedInstanceState.getBoolean("is_sci_page");
-            if(mIsSci) mViewSwitch.showNext();
+            if (mIsSci) mViewSwitch.showNext();
 
         }
 
@@ -77,6 +85,23 @@ public class MainActivity extends AppCompatActivity {
             mResultView.setText(mResultValue);
             return true;
         });
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        /* Default toggle icon */
+        menu.getItem(0).setIcon(ContextCompat.getDrawable(this,
+                sharedPreferences.getInt("icon_id", R.drawable.ic_system_default_mode))
+        );
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.action_bar, menu);
+        return true;
     }
 
     @Override
@@ -142,26 +167,32 @@ public class MainActivity extends AppCompatActivity {
         mIsSci = !mIsSci;
     }
 
-    public void onThemeButtonClick(View view) {
+    public void onThemeButtonClick(MenuItem item) {
         mNightMode = AppCompatDelegate.getDefaultNightMode();
+        int resId = 0;
         String mode = null;
         switch (mNightMode) {
             case AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_YES;
+                resId = R.drawable.ic_night_mode;
                 mode = "Dark Theme";
                 break;
             case AppCompatDelegate.MODE_NIGHT_YES:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_NO;
+                resId = R.drawable.ic_day_mode;
                 mode = "Light Theme";
                 break;
             case AppCompatDelegate.MODE_NIGHT_NO:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+                resId = R.drawable.ic_system_default_mode;
                 mode = "System Theme";
                 break;
         }
         sharedPreferences.edit()
                 .putInt("night_mode", mNightMode)
+                .putInt("icon_id", resId)
                 .apply();
+        item.setIcon(resId);
         AppCompatDelegate.setDefaultNightMode(mNightMode);
         Toast.makeText(this, "Switched to " + mode, Toast.LENGTH_SHORT).show();
     }

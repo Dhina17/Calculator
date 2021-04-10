@@ -39,4 +39,8 @@
     <!-- Result header -->
     <string name="result_header_text">Result:</string>
 
+    <!-- Action Bar -->
+    <!-- Set it as empty until fix app bar animation -->
+    <string name="dark_mode_toggle">""</string>
+
 </resources>
