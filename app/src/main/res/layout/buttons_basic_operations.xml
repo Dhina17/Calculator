@@ -13,8 +13,8 @@
         android:gravity="center"
         android:onClick="onButtonClick"
         android:text="@string/button_division"
-        android:textSize="@dimen/button_text_size"
         android:textColor="@color/basic_operators_color"
+        android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -28,8 +28,8 @@
         android:gravity="center"
         android:onClick="onButtonClick"
         android:text="@string/button_multiplication"
-        android:textSize="@dimen/button_text_size"
         android:textColor="@color/basic_operators_color"
+        android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -40,8 +40,8 @@
         android:layout_column="2"
         android:onClick="onButtonClick"
         android:text="@string/button_addition"
-        android:textSize="@dimen/button_text_size"
         android:textColor="@color/basic_operators_color"
+        android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -55,9 +55,20 @@
         android:gravity="center"
         android:onClick="onButtonClick"
         android:text="@string/button_subtraction"
-        android:textSize="@dimen/button_text_size"
         android:textColor="@color/basic_operators_color"
+        android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_point"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_row="4"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:onClick="onButtonClick"
+        android:text="@string/button_point"
+        android:textColor="@color/basic_operators_color"
+        android:textSize="@dimen/button_text_size"
+        app:cornerRadius="0dp" />
 
 </merge>

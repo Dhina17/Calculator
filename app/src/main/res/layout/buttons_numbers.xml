@@ -113,13 +113,13 @@
         app:cornerRadius="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_point"
+        android:id="@+id/button_theme"
         style="@style/Theme.NumberPad"
         android:layout_row="3"
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:onClick="onButtonClick"
-        android:text="@string/button_point"
+        android:text="@string/button_dual_zero"
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="0dp" />
 

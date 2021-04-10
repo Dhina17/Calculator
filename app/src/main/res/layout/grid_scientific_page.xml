@@ -6,11 +6,14 @@
     android:columnCount="5"
     android:rowCount="5">
 
-    <include layout="@layout/buttons_scientific_operations"/>
-    <include layout="@layout/button_delete"/>
+    <include layout="@layout/buttons_scientific_operations" />
+
+    <include layout="@layout/button_delete" />
+
     <include layout="@layout/buttons_basic_operations" />
-    <include layout="@layout/button_theme" />
+
     <include layout="@layout/button_equal" />
-    <include layout="@layout/button_sci"/>
+
+    <include layout="@layout/button_sci" />
 
 </GridLayout>

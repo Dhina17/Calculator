@@ -14,13 +14,13 @@
     <string name="button_eight">8</string>
     <string name="button_nine">9</string>
     <string name="button_point">.</string>
+    <string name="button_dual_zero">00</string>
     <string name="button_addition">+</string>
     <string name="button_subtraction">-</string>
     <string name="button_multiplication">*</string>
     <string name="button_division">/</string>
     <string name="button_equal">=</string>
     <string name="button_del">DEL</string>
-    <string name="button_theme">THEME</string>
     <string name="button_sci">SCI</string>
 
     <!-- Scientific functions -->
