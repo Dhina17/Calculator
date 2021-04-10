@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Operators -->
     <color name="sci_operators_color">@color/purple_200</color>
+
+    <!-- Delete button -->
+    <color name="del_button_tint_color_light">#CF6679</color>
 </resources>

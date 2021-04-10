@@ -8,6 +8,7 @@
         android:layout_column="3"
         android:layout_columnSpan="2"
         android:layout_gravity="fill"
+        android:backgroundTint="@color/del_button_tint_color_light"
         android:gravity="center"
         android:onClick="onDelButtonClick"
         android:text="@string/button_del"

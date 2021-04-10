@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lineage_teal">#167C80</color>
 
+    <!-- Delete button -->
+    <color name="del_button_tint_color_light">#B00020</color>
+
     <!-- Operators -->
     <color name="basic_operators_color">@color/teal_700</color>
     <color name="sci_operators_color">@color/purple_500</color>
