@@ -3,7 +3,6 @@
     android:id="@+id/grid_basic_functions"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentBottom="true"
     android:columnCount="5"
     android:rowCount="5">
 
