@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.HorizontalScrollView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import androidx.annotation.NonNull;
@@ -169,22 +168,18 @@ public class MainActivity extends AppCompatActivity {
     public void onThemeButtonClick(MenuItem item) {
         mNightMode = AppCompatDelegate.getDefaultNightMode();
         int resId = 0;
-        String mode = null;
         switch (mNightMode) {
             case AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_YES;
                 resId = R.drawable.ic_night_mode;
-                mode = "Dark Theme";
                 break;
             case AppCompatDelegate.MODE_NIGHT_YES:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_NO;
                 resId = R.drawable.ic_day_mode;
-                mode = "Light Theme";
                 break;
             case AppCompatDelegate.MODE_NIGHT_NO:
                 mNightMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
                 resId = R.drawable.ic_system_default_mode;
-                mode = "System Theme";
                 break;
         }
         sharedPreferences.edit()
@@ -193,7 +188,6 @@ public class MainActivity extends AppCompatActivity {
                 .apply();
         item.setIcon(resId);
         AppCompatDelegate.setDefaultNightMode(mNightMode);
-        Toast.makeText(this, "Switched to " + mode, Toast.LENGTH_SHORT).show();
     }
 
     private void updateCalculationView(StringBuffer sb) {
